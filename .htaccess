@@ -1,0 +1,10 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+
+# Set base direktori
+RewriteBase /
+
+# Aturan untuk mengalihkan URL ke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
